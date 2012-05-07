@@ -2,9 +2,7 @@ Library Specification := Object clone do(
   details ::= nil
   author ::= nil
   version ::= nil
-  repository ::= nil
-  documentation ::= nil
-  changelog ::= nil
+  page ::= nil
   dependencies ::= list()
   location ::= ".libraries"
 
