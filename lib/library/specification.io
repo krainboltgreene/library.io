@@ -6,7 +6,7 @@ Library Specification := Object clone do(
   dependencies ::= list()
   location ::= ".libraries"
 
-  setupUsing := method( source, root,
+  setupUsing := method(source, root,
     if(root == nil, root = "")
     dependencies foreach(library,
       fetch(source, library, root)
@@ -14,8 +14,9 @@ Library Specification := Object clone do(
     )
   )
 
-  fetch := method( source, library, root,
+  fetch := method(source, library, root,
     System system(command_from(source, library, root))
+  )
 
   uri_from := method(source, library,
     source .. "/" .. library .. ".git"
