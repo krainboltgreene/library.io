@@ -15,9 +15,17 @@ Library Specification := Object clone do(
   )
 
   fetch := method( source, library, root,
-    uri := "#{source}/#{library}.git" interpolate
-    path := "#{location}#{root}/#{library}" interpolate
-    command := "git clone #{uri} #{path}" interpolate
-    System system(command)
+    System system(command_from(source, library, root))
+
+  uri_from := method(source, library,
+    source .. "/" .. library .. ".git"
+  )
+
+  path_from := method(root, library,
+    location .. root .. "/" .. library
+  )
+
+  command_from := method(source, library, root,
+    "git clone " .. uri_from(source, library) .. " " .. path_from(root, library)
   )
 )
