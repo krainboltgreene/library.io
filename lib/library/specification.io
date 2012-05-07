@@ -10,7 +10,7 @@ Library Specification := Object clone do(
     if(root == nil, root = "")
     dependencies foreach(library,
       fetch(source, library, root)
-      doFile("#{location}/#{root}/#{library}/lib.io" interpolate) setupUsing(source, "/#{library}/#{location}" interpolate)
+      doFile(path_from(root, library) .. "/lib.io") setupUsing(source, "/" .. library .. "/" .. location)
     )
   )
 
