@@ -1,6 +1,4 @@
-doRelativeFile("extention/directory.io")
-doRelativeFile("library/libraries.io")
-Libraries add("library")
+Library := Object clone
 
-doRelativeFile("library/require.io")
+doRelativeFile("library/specification.io")
 doRelativeFile("library/version.io")
