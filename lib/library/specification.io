@@ -4,13 +4,17 @@ Library Specification := Object clone do(
   version ::= nil
   page ::= nil
   dependencies ::= list()
-  location ::= ".libraries"
+  libdir ::= ".libraries"
+  libfile ::= "lib.io"
+  clone_command ::= "git clone"
+  source_ext ::= ".git"
+  path_delimiter ::= "/"
 
   setupUsing := method(source, root,
     if(root == nil, root = "")
     dependencies foreach(library,
       fetch(source, library, root)
-      doFile(path_from(root, library) .. "/lib.io") setupUsing(source, "/" .. library .. "/" .. location)
+      doFile(path_from(root, library) .. path_delimiter .. libfile) setupUsing(source, path_delimiter .. library .. path_delimiter .. libdir)
     )
   )
 
@@ -19,14 +23,14 @@ Library Specification := Object clone do(
   )
 
   uri_from := method(source, library,
-    source .. "/" .. library .. ".git"
+    source .. path_delimiter .. library .. source_ext
   )
 
   path_from := method(root, library,
-    location .. root .. "/" .. library
+    libdir .. root .. path_delimiter .. library
   )
 
   command_from := method(source, library, root,
-    "git clone " .. uri_from(source, library) .. " " .. path_from(root, library)
+    clone_command .. " " .. uri_from(source, library) .. " " .. path_from(root, library)
   )
 )
