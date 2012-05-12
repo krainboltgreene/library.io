@@ -1,4 +1,6 @@
 Library Specification := Object clone do(
+
+  # This is for the package details, like a description
   details ::= nil
 
   # This is where the author's name (and contact) go, either string or list
