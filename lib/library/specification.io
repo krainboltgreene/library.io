@@ -18,6 +18,8 @@ Library Specification := Object clone do(
   libfile ::= "lib.io"
   clone_command ::= "git clone"
   source_ext ::= ".git"
+
+  # This is mainly for windows
   path_delimiter ::= "/"
 
   setupUsing := method(source, root,
