@@ -17,6 +17,8 @@ Library Specification := Object clone do(
   # What file to look for in searching through dependencies
   libfile ::= "lib.io"
   clone_command ::= "git clone"
+
+  # This is the extention for the repository
   source_ext ::= ".git"
 
   # This is mainly for windows
