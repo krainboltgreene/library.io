@@ -13,6 +13,8 @@ Library Specification := Object clone do(
 
   # Where the library directory is going to be located
   libdir ::= ".libraries"
+
+  # What file to look for in searching through dependencies
   libfile ::= "lib.io"
   clone_command ::= "git clone"
   source_ext ::= ".git"
