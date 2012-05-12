@@ -7,6 +7,8 @@ Library Specification := Object clone do(
 
   # This is just some more metadata for the library, a website to the repo or docs
   page ::= nil
+
+  # This is the list of dependencies, normally a empty list
   dependencies ::= list()
   libdir ::= ".libraries"
   libfile ::= "lib.io"
