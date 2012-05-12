@@ -1,5 +1,7 @@
 Library Specification := Object clone do(
   details ::= nil
+
+  # This is where the author's name (and contact) go, either string or list
   author ::= nil
   version ::= nil
 
