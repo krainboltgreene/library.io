@@ -2,6 +2,8 @@ Library Specification := Object clone do(
   details ::= nil
   author ::= nil
   version ::= nil
+
+  # This is just some more metadata for the library, a website to the repo or docs
   page ::= nil
   dependencies ::= list()
   libdir ::= ".libraries"
