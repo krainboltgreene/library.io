@@ -5,7 +5,4 @@ LibraryIo := Library Specification clone do(
   setAuthor("Kurtis Rainbolt-Greene (@krainboltgreene)")
   setVersion( Library Version clone setMajor(1) )
   setPage("http://library-io.io")
-  setDependencies(list(
-    "krainboltgreene/ostruct.io"
-  ))
-) setupUsing("git://github.com")
+)
