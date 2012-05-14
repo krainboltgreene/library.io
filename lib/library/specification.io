@@ -1,11 +1,12 @@
 Library Specification := Object clone do(
+  # This is set in the lib.io file, and shouldn't be touched
+  version ::= nil
 
   # This is for the package details, like a description
   details ::= nil
 
   # This is where the author's name (and contact) go, either string or list
   author ::= nil
-  version ::= nil
 
   # This is just some more metadata for the library, a website to the repo or docs
   page ::= nil
