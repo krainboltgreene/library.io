@@ -19,3 +19,8 @@ Install
 Contributing
 ------------
 
+
+
+License
+-------
+
