@@ -28,6 +28,7 @@ Library Specification := Object clone do(
   # This is the extention scm, if any
 
   path_delimiter ::= "/"
+  # FIXME: Find out how to switch
 
   setupUsing := method(source, root,
     if(root == nil, root = "")
