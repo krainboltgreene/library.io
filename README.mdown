@@ -6,6 +6,19 @@ Nothing too complex.
 A few extentions.
 Mostly a lot of structure.
 
+Features
+--------
+
+  * Use git repositories as sources, and thus any git server as a library server
+  *
+
+
+Futures
+-------
+
+See Issue List
+
+
 Example
 -------
 
