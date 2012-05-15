@@ -14,4 +14,11 @@ VersionTest := UnitTest clone do(
     actual := object major
     assertEquals(expected, actual)
   )
+
+  testMinorDefault := method(
+    expected := 0
+    actual := object minor
+    assertEquals(expected, actual)
+  )
+
 )
