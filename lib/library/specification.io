@@ -18,16 +18,15 @@ Library Specification := Object clone do(
   # Where the library directory is going to be located
   libdir ::= ".libraries"
 
-  # What file to look for in searching through dependencies
   libfile ::= "lib.io"
+  # What file to look for in searching library metadata
 
-  # What exact git command this is using listed here
   clone_command ::= "git clone"
+  # What exact scm command to use for downloading code
 
-  # This is the extention for the repository
   source_ext ::= ".git"
+  # This is the extention scm, if any
 
-  # This is mainly for windows
   path_delimiter ::= "/"
 
   setupUsing := method(source, root,
