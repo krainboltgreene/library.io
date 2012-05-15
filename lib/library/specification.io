@@ -35,8 +35,15 @@ Library Specification := Object clone do(
     if(root == nil, root = "")
     dependencies foreach(library,
       fetch(source, library, root)
-      doFile(path_from(root, library) .. path_delimiter .. libfile) setupUsing(source, path_delimiter .. library .. path_delimiter .. libdir)
+      gather(library)
     )
+  )
+
+  gather := method(library,
+    path := path_from(root, library)
+    spec := doFile(path .. pathDelimiter .. libFile)
+    newPath := pathDelimiter .. library .. pathDelimiter .. libDir
+    spec setupUsing(source, newPath)
   )
 
   fetch := method(source, library, root,
