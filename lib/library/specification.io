@@ -40,18 +40,18 @@ Library Specification := Object clone do(
   )
 
   fetch := method(source, library, root,
-    System system(command_from(source, library, root))
+    System system(commandFrom(source, library, root))
   )
 
-  uri_from := method(source, library,
-    source .. path_delimiter .. library .. source_ext
+  uriFrom := method(source, library,
+    source .. pathDelimiter .. library .. sourceExt
   )
 
-  path_from := method(root, library,
-    libdir .. root .. path_delimiter .. library
+  pathFrom := method(root, library,
+    libDir .. root .. pathDelimiter .. library
   )
 
-  command_from := method(source, library, root,
-    clone_command .. " " .. uri_from(source, library) .. " " .. path_from(root, library)
+  commandFrom := method(source, library, root,
+    cloneCommand .. " " .. uriFom(source, library) .. " " .. pathFrom(root, library)
   )
 )
