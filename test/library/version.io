@@ -21,4 +21,9 @@ VersionTest := UnitTest clone do(
     assertEquals(expected, actual)
   )
 
+  testPatchDefault := method(
+    expected := 0
+    actual := object patch
+    assertEquals(expected, actual)
+  )
 )
