@@ -12,6 +12,7 @@ Library Specification := Object clone do(
   page ::= nil
 
   # The list of dependencies
+  # TODO: We'll need to account for version
   dependencies ::= list()
 
   # Where the library directory is going to be located
