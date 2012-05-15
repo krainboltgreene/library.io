@@ -31,6 +31,7 @@ Library Specification := Object clone do(
   # FIXME: Find out how to switch
 
   setupUsing := method(source, root,
+    # NOTE: This is because nil asString #=> "nil"
     if(root == nil, root = "")
     dependencies foreach(library,
       fetch(source, library, root)
