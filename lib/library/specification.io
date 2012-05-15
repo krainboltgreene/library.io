@@ -16,19 +16,19 @@ Library Specification := Object clone do(
   dependencies ::= list()
 
   # Where the library directory is going to be located
-  libdir ::= ".libraries"
+  libDir ::= ".libraries"
 
-  libfile ::= "lib.io"
   # What file to look for in searching library metadata
+  libFile ::= "lib.io"
 
-  clone_command ::= "git clone"
   # What exact scm command to use for downloading code
+  cloneCommand ::= "git clone"
 
-  source_ext ::= ".git"
   # This is the extention scm, if any
+  sourceExt ::= ".git"
 
-  path_delimiter ::= "/"
   # FIXME: Find out how to switch
+  pathDelimiter ::= "/"
 
   setupUsing := method(source, root,
     # NOTE: This is because nil asString #=> "nil"
