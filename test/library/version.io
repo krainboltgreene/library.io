@@ -1,29 +1,29 @@
 VersionTest := UnitTest clone do(
   setUp := method(
     super(setUp)
-    self object := Library Version clone
+    self version := Library Version clone
   )
 
   tearDown := method(
     super(tearDown)
-    self object := nil
+    self version := nil
   )
 
   testMajorDefault := method(
     expected := 0
-    actual := object major
+    actual := version major
     assertEquals(expected, actual)
   )
 
   testMinorDefault := method(
     expected := 0
-    actual := object minor
+    actual := version minor
     assertEquals(expected, actual)
   )
 
   testPatchDefault := method(
     expected := 0
-    actual := object patch
+    actual := version patch
     assertEquals(expected, actual)
   )
 )
