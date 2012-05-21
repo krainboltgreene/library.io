@@ -31,9 +31,6 @@ Library Specification := Object clone do(
   pathDelimiter ::= "/"
 
   setupUsing := method(source, root,
-    # NOTE: This is because nil asString #=> "nil"
-    if(root == nil, root = "")
-
     dependencies foreach(library,
       fetch(source, library, root)
       gather(library)
