@@ -7,3 +7,6 @@
 # Ignore tempfiles
 /tmp
 /test/tmp
+
+# Ignore libraries
+/.libraries

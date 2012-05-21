@@ -5,3 +5,39 @@ This is the start of a library manager.
 Nothing too complex.
 A few extentions.
 Mostly a lot of structure.
+
+Features
+--------
+
+  * DVCS-backend
+  * Complete Isolation
+  * First class versions
+  * Tested
+  * Documented
+  * Updated within the last 2 years
+
+
+Futures
+-------
+
+See Issue List
+
+
+Example
+-------
+
+
+
+Install
+-------
+
+
+
+Contributing
+------------
+
+
+
+License
+-------
+
