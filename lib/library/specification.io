@@ -42,8 +42,8 @@ Library Specification := Object clone do(
 
   gather := method(library,
     path := path_from(root, library)
-    spec := doFile(path .. pathDelimiter .. libFile)
-    newPath := pathDelimiter .. library .. pathDelimiter .. libDir
+    spec := doFile(Path with(path, libFile))
+    newPath := pathDelimiter .. Path with(library, libDir)
     spec setupUsing(source, newPath)
   )
 
@@ -52,14 +52,14 @@ Library Specification := Object clone do(
   )
 
   uriFrom := method(source, library,
-    source .. pathDelimiter .. library .. sourceExt
+    Path with(source, library .. sourceExt)
   )
 
-  pathFrom := method(root, library,
-    libDir .. root .. pathDelimiter .. library
+  pathFrom := method(library, root,
+    Path with(libDir, root, library)
   )
 
   commandFrom := method(source, library, root,
-    cloneCommand .. " " .. uriFom(source, library) .. " " .. pathFrom(root, library)
+    cloneCommand .. " " .. uriFrom(source, library) .. " " .. pathFrom(library, root)
   )
 )
