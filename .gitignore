@@ -6,4 +6,5 @@
 
 # Ignore tempfiles
 /tmp
+# Also ignore tempfiles in test directory
 /test/tmp
