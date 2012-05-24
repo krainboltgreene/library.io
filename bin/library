@@ -5,7 +5,9 @@ doRelativeFile(Path with("..", "lib", "library", "scaffold.io"))
 arguments := System args
 options := System getOptions(arguments)
 
-arguments second switch(
-  "new", doRelativeFile(Path with("..", "lib", "library", "new.io"))
 # `library new [name] [-b|--bin]`
+
+if(arguments size > 1,
+  Library Scaffold performWithArgList(arguments second),
+  "Show help for library"
 )
