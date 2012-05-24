@@ -1,8 +1,8 @@
 #!/usr/bin/env io
-# `library new [name] [-b|--bin]`
 arguments := System args
 options := System getOptions(arguments)
 
 arguments second switch(
   "new", doRelativeFile(Path with("..", "lib", "library", "new.io"))
+# `library new [name] [-b|--bin]`
 )
