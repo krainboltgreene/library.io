@@ -1,4 +1,7 @@
 #!/usr/bin/env io
+
+doRelativeFile(Path with("..", "lib", "library", "scaffold.io"))
+
 arguments := System args
 options := System getOptions(arguments)
 
