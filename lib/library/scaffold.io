@@ -13,4 +13,10 @@ Library Scaffold := Object clone do(
     Directory createSubdirectory(path)
   )
 
+  create_file := method(
+    path := Path with(message arguments) interpolate
+    template := File with(path) contents interpolate
+
+  )
+
 )
