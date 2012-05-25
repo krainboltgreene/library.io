@@ -8,4 +8,9 @@ Library Scaffold := Object clone do(
     Directory createSubdirectory(path)
   )
 
+  create_directory := method(
+    path := Path with(message arguments) interpolate
+    Directory createSubdirectory(path)
+  )
+
 )
