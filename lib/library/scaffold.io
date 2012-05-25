@@ -19,4 +19,7 @@ Library Scaffold := Object clone do(
 
   )
 
+  format_name := method(name,
+
+  )
 )
