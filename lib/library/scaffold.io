@@ -1,7 +1,22 @@
 Library Scaffold := Object clone do(
-  new := method()
   update := method()
   test := method()
+  new := method(arguments, options,
+    setName(format_name(arguments third))
+    create_root
+    create_directory("lib")
+    create_file("lib", "#{name}.io")
+    create_directory("lib", name)
+    create_file("lib", name, "sample.io")
+    create_directory("test")
+    create_directory("test", name)
+    create_file("test", name, "sample.io")
+    create_directory("ex")
+    create_file("ex", "ex1.io")
+    create_directory("bin")
+    create_file("bin", name)
+  )
+
   name ::= nil
 
   create_root := method(
