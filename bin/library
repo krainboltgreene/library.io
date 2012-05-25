@@ -1,1 +1,13 @@
 #!/usr/bin/env io
+
+doRelativeFile(Path with("..", "lib", "library", "scaffold.io"))
+
+arguments := System args
+options := System getOptions(arguments)
+
+# `library new [name] [-b|--bin]`
+
+if(arguments size > 1,
+  Library Scaffold performWithArgList(arguments second, arguments, options),
+  "Show help for library"
+)
